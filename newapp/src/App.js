@@ -12,9 +12,9 @@ import "./App.css";
 const App = () => {
   return (
     <div id="app" className="d-flex flex-column h-100">
-      <NavBar />
       <Container className="flex-grow-1 mt-5">
         <BrowserRouter>
+          <NavBar/>
           <Switch>
             <Route path="/" exact component={Home} />
             <Route path="/profile" component={Profile} />
