@@ -1,8 +1,8 @@
 import React, { Fragment } from "react";
 import {useAuth0 } from '@auth0/auth0-react';
 import { Hero, Content } from "../components";
-import auth0 from '@auth0/auth0-spa-js';
-import LoginButton from "../components/log-btn";
+import {LoginButton} from "../components/log-btn"
+
 
 const Home = () => (
   <Fragment>
