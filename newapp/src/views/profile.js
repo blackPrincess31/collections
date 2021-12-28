@@ -10,20 +10,20 @@ export const Profile = () => {
         You use will use an ID Token to get the profile information of a
         logged-in user. <strong>This route should be private</strong>.
       </p>
-      {/* <button onClick={LogoutButton}>logout</button> */}
+      <button onClick={LogoutButton}>logout</button> 
     </Container>
   );
 };
 
 
-// const LogoutButton = () =>
-//  {
-//   const { logout } = useAuth0();
-//   return (
-//         logout({
-//           returnTo: window.location.origin,
-//         })
-//   );
-// };
+const LogoutButton = () =>
+ {
+  const { logout } = useAuth0();
+  return (
+        logout({
+          returnTo: window.location.origin,
+        })
+  );
+};
 
 export default Profile;

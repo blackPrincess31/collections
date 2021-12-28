@@ -62,16 +62,16 @@ var url = webAuth.client.buildAuthorizeUrl({
 //   algorithms: ["RS256"],
 // });
 
-// app.get("/api/public-message", (req, res) => {
-//   res.send({
-//     msg: "The API doesn't require an access token to share this message.",
-//   });
-// });
+app.get("/api/public-message", (req, res) => {
+  res.send({
+    msg: "The API doesn't require an access token to share this message.",
+  });
+});
 
-// app.get("/api/private-message", checkJwt, (req, res) => {
-//   res.send({
-//     msg: "The API successfully validated your access token.",
-//   });
-// });
+app.get("/api/private-message", checkJwt, (req, res) => {
+  res.send({
+    msg: "The API successfully validated your access token.",
+  });
+});
 
 app.listen(3000, () => console.log('API is running on http://localhost:3000/home'));
