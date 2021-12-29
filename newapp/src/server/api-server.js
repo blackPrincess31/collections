@@ -18,20 +18,20 @@ const domain = process.env.REACT_APP_AUTHO_DOMAIN ;
 const clientID = process.env.REACT_APP_AUTHO_CLIENT_ID ;
 
 
-// Initialize app
-var webAuth = new auth0.WebAuth({
-  domain:     'domain',
-  clientID:     'clientID',
-});
+// // Initialize app
+// var webAuth = new auth0.WebAuth({
+//   domain:     'domain',
+//   clientID:     'clientID',
+// });
 
-// Calculate URL to redirect to
-var url = webAuth.client.buildAuthorizeUrl({
-  clientID: 'clientID', // string
-  responseType: 'token', // code or token
-  redirectUri: 'http://localhost:3000/profile',
-  scope: 'openid profile email',
-  state: 'YOUR_STATE',
-});
+// // Calculate URL to redirect to
+// var url = webAuth.client.buildAuthorizeUrl({
+//   clientID: 'clientID', // string
+//   responseType: 'token', // code or token
+//   redirectUri: 'http://localhost:3000/profile',
+//   scope: 'openid profile email',
+//   state: 'YOUR_STATE',
+// });
 
 // Redirect to url
 // ...

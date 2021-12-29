@@ -8,6 +8,7 @@ import { Profile } from "./views";
 import ExternalApi from "./views/external-app";
 
 import "./App.css";
+import Auth0ProviderWithHistory from "./auth/auth0-provider-with-history";
 
 const App = () => {
   return (
@@ -19,10 +20,10 @@ const App = () => {
             <Route path="/" exact component={Home} />
             <Route path="/profile" component={Profile} />
             <Route path="/external-api" component={ExternalApi} />
-          </Switch>
+          </Switch> 
+          <Footer />
         </BrowserRouter>
       </Container>
-      <Footer />
     </div>
   );
 };
