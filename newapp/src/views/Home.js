@@ -4,20 +4,18 @@ import { Hero, Content } from "../components";
 import {LoginButton} from "../components/log-btn"
 
 
-const Home = () => (
-  <Fragment>
-    <Hero />
-    <hr />
-    <Content />
-
-    <button onClick={LoginButton}> log In </button>
+const Home = () => {
+  return (
+    <Fragment>
+      <Hero />
+      <hr />
+      <Content />
+      <LoginButton/>      
+      <button onClick={SignupButton}>Sign Up</button>
     
-    <button onClick={SignupButton}>Sign Up</button>
-   
-  </Fragment>
-   
-
-);
+    </Fragment>
+  )
+}
 
 
 const SignupButton = () => {
