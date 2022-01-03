@@ -12,6 +12,7 @@ import Auth0ProviderWithHistory from "./auth/auth0-provider-with-history";
 
 const App = () => {
   return (
+    <Auth0ProviderWithHistory>
     <div id="app" className="d-flex flex-column h-100">
       <Container className="flex-grow-1 mt-5">
         <BrowserRouter>
@@ -25,6 +26,7 @@ const App = () => {
         </BrowserRouter>
       </Container>
     </div>
+    </Auth0ProviderWithHistory>
   );
 };
 

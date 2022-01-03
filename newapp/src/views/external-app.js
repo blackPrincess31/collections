@@ -13,6 +13,7 @@ export const ExternalApi = () => {
         and the API will validate it using the API's audience value.{" "}
         <strong>This route should be private</strong>.
       </p>
+      
       <ButtonGroup>
         <Button color="primary" className="mt-5">
           Get Public Message

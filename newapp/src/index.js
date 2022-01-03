@@ -15,13 +15,15 @@ ReactDOM.render(
   //   <App />
   // </Auth0Provider>
   // </BrowserRouter>,
+  <React.StrictMode>
+    <Router>
 
-<Router>
-    <Auth0ProviderWithHistory>
-      <App />
-    </Auth0ProviderWithHistory>
-  </Router>,
+      <Auth0ProviderWithHistory>
+        <App />
 
+      </Auth0ProviderWithHistory>
+    </Router>
+  </React.StrictMode>,
   document.getElementById('root')
 );
 

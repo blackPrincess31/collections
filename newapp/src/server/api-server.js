@@ -18,6 +18,23 @@ const domain = process.env.REACT_APP_AUTHO_DOMAIN ;
 const clientID = process.env.REACT_APP_AUTHO_CLIENT_ID ;
 
 
+var request = require("request");
+
+var options = { method: 'POST',
+  url: 'https://dev-kyqugnex.us.auth0.com/oauth/device/code',
+  headers: { 'content-type': 'application/x-www-form-urlencoded' },
+  form:
+   { client_id: 'YOUR_CLIENT_ID',
+     scope: 'SCOPE',
+     audience: 'API_IDENTIFIER' }
+   };
+
+request(options, function (error, response, body) {
+  if (error) throw new Error(error);
+
+  console.log(body);
+});
+
 // // Initialize app
 // var webAuth = new auth0.WebAuth({
 //   domain:     'domain',
