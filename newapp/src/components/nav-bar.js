@@ -6,7 +6,7 @@ import { Container, Nav, Navbar } from "react-bootstrap";
 
 const MainNav = () => (
 
-  <Nav className="mr-auto">
+  <Nav className ="mr-auto" >
     <Nav.Link as={RouterNavLink} exact to="/" activeClassName="router-link-exact-active">
       Home
     </Nav.Link>
@@ -24,7 +24,7 @@ const AuthNav = () => null;
 
 const NavBar = () => {
   return (
-    <Navbar bg="light" expand="md">
+    <Navbar  bg="light">
       <Container>
 
         <Navbar.Brand as={RouterNavLink} className="logo" to="/" />

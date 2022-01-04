@@ -1,31 +1,46 @@
 import React from "react";
 import { Container } from "react-bootstrap";
-import { useAuth0 } from '@auth0/auth0-react';
+import { useAuth0, withAuthenticationRequired } from '@auth0/auth0-react';
+import { LogoutButton } from "../components/log-btn";
 
 const Profile = () => {
   return (
     <Container className="mb-5">
-      <h1>Profile</h1>
-      <LogoutButton/>
+      <ProfilePage />
+      <LogoutButton />
     </Container>
   );
 };
 
+const ProfilePage = withAuthenticationRequired(
+  () => {
+    const { user } = useAuth0()
 
-const LogoutButton = () => {
-  const { logout } = useAuth0();
-  return (
-    <button
-      className="btn btn-danger btn-block"
-      onClick={() =>
-        logout({
-          returnTo: window.location.origin,
-        })
-      }
-    >
-      Log Out
-    </button>
-  );
-};
+    return (
+      <>
+        <h1>Profile Page</h1>
+        <div className='profile'>
+          <img src={user?.picture} alt={user?.name} />
+          <div>
+            <h2>{user?.nickname}</h2>
+            <p>{user?.email}</p>
+          </div>
+        </div>
+        <h2>Other Users</h2>
+        <div>
+          
+        </div>
+      </>
+    )
+  },
 
-export {Profile, LogoutButton};
+  {
+     returnTo: 
+     '/profile',
+
+  }
+)
+
+
+
+export { Profile, ProfilePage };
