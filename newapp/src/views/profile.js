@@ -28,7 +28,7 @@ const ProfilePage = withAuthenticationRequired(
         </div>
         <h2>Other Users</h2>
         <div>
-          
+        
         </div>
       </>
     )

@@ -16,67 +16,32 @@ const app = express();
 
 const domain = process.env.REACT_APP_AUTHO_DOMAIN ;
 const clientID = process.env.REACT_APP_AUTHO_CLIENT_ID ;
+const audience = process.env.AUTH0_AUDIENCE;
 
 
-var request = require("request");
 
-var options = { method: 'POST',
-  url: 'https://dev-kyqugnex.us.auth0.com/oauth/device/code',
-  headers: { 'content-type': 'application/x-www-form-urlencoded' },
-  form:
-   { client_id: 'YOUR_CLIENT_ID',
-     scope: 'SCOPE',
-     audience: 'API_IDENTIFIER' }
-   };
+// var axios = require("axios").default;
 
-request(options, function (error, response, body) {
-  if (error) throw new Error(error);
+// var options = {
+//   method: 'PATCH',
+//   url: 'https://dev-kyqugnex.us.auth0.com/api/v2/resource-servers/61d434e4ee332201e6ac68eb',
+//   headers: {
+//     'content-type': 'application/json',
+//     authorization: 'Bearer MGMT_API_ACCESS_TOKEN',
+//     'cache-control': 'no-cache'
+//   },
+//   data: {
+//     scopes: [
+//       {value: 'PERMISSION_NAME', description: 'PERMISSION_DESC'},
+//       {value: 'PERMISSION_NAME', description: 'PERMISSION_DESC'}
+//     ]
+//   }
+// };
 
-  console.log(body);
-});
-
-// // Initialize app
-// var webAuth = new auth0.WebAuth({
-//   domain:     'domain',
-//   clientID:     'clientID',
-// });
-
-// // Calculate URL to redirect to
-// var url = webAuth.client.buildAuthorizeUrl({
-//   clientID: 'clientID', // string
-//   responseType: 'token', // code or token
-//   redirectUri: 'http://localhost:3000/profile',
-//   scope: 'openid profile email',
-//   state: 'YOUR_STATE',
-// });
-
-// Redirect to url
-// ...
-
-// const port = process.env.API_PORT;
-// const appOrigin = process.env.APP_ORIGIN;
-// const audience = process.env.AUTH0_AUDIENCE;
-// const issuer = process.env.AUTH0_ISSUER;
-
-// if (!issuer || !audience) {
-//   throw new Error("Please make sure that .env is in place and populated");
-// }
-
-// app.use(morgan("dev"));
-// app.use(helmet());
-// app.use(cors({ origin: appOrigin }));
-
-// const checkJwt = jwt({
-//   secret: jwksRsa.expressJwtSecret({
-//     cache: true,
-//     rateLimit: true,
-//     jwksRequestsPerMinute: 5,
-//     jwksUri: `${issuer}.well-known/jwks.json`,
-//   }),
-
-//   audience: audience,
-//   issuer: issuer,
-//   algorithms: ["RS256"],
+// axios.request(options).then(function (response) {
+//   console.log(response.data);
+// }).catch(function (error) {
+//   console.error(error);
 // });
 
 app.get("/api/public-message", (req, res) => {

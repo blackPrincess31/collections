@@ -13,8 +13,8 @@ const MainNav = () => (
     <Nav.Link as={RouterNavLink} exact to="/profile" activeClassName="router-link-exact-active">
       Profile
     </Nav.Link>
-    <Nav.Link as={RouterNavLink} exact to="/external-api" activeClassName="router-link-exact-active">
-      External API
+    <Nav.Link as={RouterNavLink} exact to="/Collections" activeClassName="router-link-exact-active">
+    Collections
     </Nav.Link>
   </Nav>
 

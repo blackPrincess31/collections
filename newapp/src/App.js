@@ -5,7 +5,7 @@ import { NavBar, Footer } from "./components";
 
 import { Home } from "./views";
 import { Profile } from "./views";
-import ExternalApi from "./views/external-app";
+import {Collections} from "./views/Collections";
 
 import "./App.css";
 import Auth0ProviderWithHistory from "./auth/auth0-provider-with-history";
@@ -20,8 +20,7 @@ const App = () => {
           <Switch>
             <Route path="/" exact component={Home} />
             <Route path="/profile" component={Profile} />
-            <Route path="/external-api" component={ExternalApi} />
-            {/* <Route exact path = "/" >{ loggedIn? <Redirect to = "/profile" /> : <Home />} </Route > */}
+            <Route path="/Collections" component={Collections} />
           </Switch> 
           <Footer />
         </BrowserRouter>

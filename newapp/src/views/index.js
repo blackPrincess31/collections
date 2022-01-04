@@ -1,5 +1,5 @@
-import ExternalApi from "./external-app";
+import {Collections} from "./Collections";
 import Home from "./Home";
 import { Profile } from "./profile";
 
-export { ExternalApi, Home, Profile };
+export { Collections, Home, Profile };
