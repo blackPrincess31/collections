@@ -8,14 +8,16 @@ import "bootstrap/dist/css/bootstrap.min.css"
 //   clientID:     process.env.REACT_APP_AUTHO_CLIENT_ID ,
 //   audience:     process.env.AUTH0_AUDIENCE,
 //   redirectUri:  'http://localhost:3000/profile', 
-//   scope: 'openid profile email',
+//   scope: 'read',
 //   responseType: 'token id_token',
 // });
+
+
 
 const LoginButton = () => {
   const {loginWithPopup} = useAuth0();
 
-  return <Button onClick={() =>loginWithPopup()}>Log In</Button>;
+return<Button onClick={() =>loginWithPopup()}>Log In</Button>;
 
 };
 

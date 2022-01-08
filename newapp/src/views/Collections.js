@@ -8,7 +8,7 @@ import { Container } from "react-bootstrap";
     <Container className="mb-5">
       <h1>Collections</h1>
       <p>
-        
+        {}
       </p>
       </Container>
   )

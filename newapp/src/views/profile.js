@@ -14,8 +14,8 @@ const Profile = () => {
 
 const ProfilePage = withAuthenticationRequired(
   () => {
-    const { user } = useAuth0()
-
+    // const { user } = useAuth0()
+const { user, isAuthenticated } = useAuth0();
     return (
       <>
         <h1>Profile Page</h1>
@@ -25,10 +25,9 @@ const ProfilePage = withAuthenticationRequired(
             <h2>{user?.nickname}</h2>
             <p>{user?.email}</p>
           </div>
-        </div>
-        <h2>Other Users</h2>
-        <div>
-        
+          <h2>----------------</h2>
+          
+          <p>{user.sub}</p>
         </div>
       </>
     )
@@ -37,7 +36,6 @@ const ProfilePage = withAuthenticationRequired(
   {
      returnTo: 
      '/profile',
-
   }
 )
 

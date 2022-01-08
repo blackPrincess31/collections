@@ -3,6 +3,7 @@ import { useAuth0 } from '@auth0/auth0-react';
 import { Hero, Content } from "../components";
 import { LoginButton } from "../components/log-btn"
 
+
 import Auth0ProviderWithHistory from "../auth/auth0-provider-with-history";
 
 const Home = () => {
@@ -12,11 +13,11 @@ const Home = () => {
       <hr />
       <Content />
       <LoginButton />
-      
 
     </Fragment>
   )
 }
+
 
 
 
