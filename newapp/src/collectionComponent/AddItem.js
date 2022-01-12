@@ -14,6 +14,7 @@ export default function Input() {
   const handleSubmit = () => {
     dispatch(actionCreators.addToList(input));
     setInput("");
+    
   };
 
   const handleClear = () => {
@@ -24,7 +25,7 @@ export default function Input() {
     <div>
       <input
         className="input"
-        placeholder="Add item..."
+        placeholder="Add collection..."
         value={input}
         onChange={handleInputChange}
       />

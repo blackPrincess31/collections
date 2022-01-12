@@ -1,16 +1,17 @@
 const initialState = {
     items: []
   };
-  
+  let id = 0;
   const addItem = (array, action) => {
     return array.map((item, index) => {
       if (index !== action.payload) {
         return item;
+               
       }
   
       return {
         ...item,
-        inCollection: true
+        inCollection: true,
       };
     });
   };
@@ -28,15 +29,16 @@ const initialState = {
             ...state.items,
             {
               value: action.payload,
-              inCollection: false
+              inCollection: true,
+              id: ++id,
             }
           ]
         };
-      case "ADD_TO_COLLECTION":
-        return {
-          ...state,
-          items: addItem(state.items, action)
-        };
+      // case "ADD_TO_COLLECTION":
+      //   return {
+      //     ...state,
+      //     items: addItem(state.items, action)
+      //   };
       case "REMOVE_ITEM":
         return {
           ...state,

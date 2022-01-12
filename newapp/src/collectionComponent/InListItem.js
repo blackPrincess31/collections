@@ -14,7 +14,7 @@ export default function InListItem({ item, index }) {
     <ListGroup.Item
       key={index}
       variant="danger"
-      onClick={() => addItem(index)}
+      // onClick={() => addItem(index)}
     >
       {item.value}
     </ListGroup.Item>
