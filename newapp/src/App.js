@@ -5,11 +5,12 @@ import { NavBar, Footer } from "./components";
 
 import { Home } from "./views";
 import { Profile } from "./views";
-import {Collections} from "./views/Collections";
+import { Collections} from "./views/Collections/Collection.js";
 
 import "./App.css";
 import Auth0ProviderWithHistory from "./auth/auth0-provider-with-history";
 
+ 
 const App = () => {
   return (
     <Auth0ProviderWithHistory>
@@ -20,7 +21,7 @@ const App = () => {
           <Switch>
             <Route path="/" exact component={Home} />
             <Route path="/profile" component={Profile} />
-            <Route path="/Collections" component={Collections} />
+            <Route path="/collections" component={Collections} />
           </Switch> 
           <Footer />
         </BrowserRouter>

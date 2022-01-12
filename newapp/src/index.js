@@ -5,23 +5,29 @@ import { Auth0Provider } from "@auth0/auth0-react";
 import Auth0ProviderWithHistory from "./auth/auth0-provider-with-history";
 import { BrowserRouter as Router } from "react-router-dom";
 
+import { createStore, applyMiddleware } from 'redux';
+// import CollectionReducer from "./redux/redusers";
+// import thunk from 'redux-thunk';
+import { Provider } from "react-redux";
+// import store from "./redux/store";
+
+// const store = createStore(CollectionReducer, applyMiddleware(thunk));
+
+import reducer from "./store2/reducer2";
+
+const store = createStore(reducer);
+
 ReactDOM.render(
-  // <BrowserRouter>
-  //  <Auth0Provider
-  //   domain=" dev-kyqugnex.us.auth0.com"
-  //   clientId="BSAJZuV3YlBjTchDo9GAPM0ftNt095jv"
-  //   redirectUri={window.location.origin}
-  // >
-  //   <App />
-  // </Auth0Provider>
-  // </BrowserRouter>,
+
+  <Provider store ={store}>
   <React.StrictMode>
     <Router>
       <Auth0ProviderWithHistory>
         <App />
       </Auth0ProviderWithHistory>
     </Router>
-  </React.StrictMode>,
+  </React.StrictMode>
+  </Provider>,
   document.getElementById('root')
 );
 
