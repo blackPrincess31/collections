@@ -1,10 +1,7 @@
 import React, { useState } from "react";
 import { Container } from "react-bootstrap";
-import { ADD_COLLECTION, DELETE_COLLECTION } from "../../redux/actions/types";
 
-import AddCollection from "./AddCollection";
-import TodoList  from "./CollectionsList";
-import { AddItem,ShoppingList } from "../../comp2"; 
+import { AddItem,ShoppingList } from "../collectionComponent"; 
 
  const Collections = () => {
 

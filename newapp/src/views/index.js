@@ -1,4 +1,4 @@
-import { Collections } from "./Collections/Collection.js";
+import { Collections } from "./Collection.js";
 import Home from "./Home";
 import { Profile } from "./profile";
 

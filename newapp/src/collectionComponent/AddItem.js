@@ -32,7 +32,7 @@ export default function Input() {
         Add
       </Button>
       <Button className="button" variant="outline-dark" onClick={handleClear}>
-        Clear
+        Clear_ALL
       </Button>
     </div>
   );

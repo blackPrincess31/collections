@@ -5,7 +5,7 @@ import { NavBar, Footer } from "./components";
 
 import { Home } from "./views";
 import { Profile } from "./views";
-import { Collections} from "./views/Collections/Collection.js";
+import { Collections} from "./views/Collection.js";
 
 import "./App.css";
 import Auth0ProviderWithHistory from "./auth/auth0-provider-with-history";

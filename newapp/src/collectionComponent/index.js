@@ -3,6 +3,6 @@ import AddItem from "./AddItem";
 
 import ShoppingList from "./shoppinglist";
 import InListItem from "./InListItem";
-import InBasketItem from "./InBascetItem";
+import InCollectionItem from "./InCollectionItem";
 
-export { AddItem, ShoppingList, InListItem, InBasketItem };
+export { AddItem, ShoppingList, InListItem, InCollectionItem };

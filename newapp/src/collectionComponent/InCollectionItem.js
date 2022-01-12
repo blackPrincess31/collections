@@ -3,18 +3,18 @@ import { ListGroup } from "react-bootstrap";
 import { useDispatch } from "react-redux";
 import { actionCreators } from "../store2/actions2";
 
-export default function InListItem({ item, index }) {
+export default function InCollectionItem({ item, index }) {
   const dispatch = useDispatch();
 
-  const addItemToBasket = index => {
-    dispatch(actionCreators.addToBasket(index));
+  const removeItemFromList = index => {
+    dispatch(actionCreators.removeItem(index));
   };
 
   return (
     <ListGroup.Item
       key={index}
-      variant="danger"
-      onClick={() => addItemToBasket(index)}
+      variant="dark"
+      onClick={() => removeItemFromList(index)}
     >
       {item.value}
     </ListGroup.Item>

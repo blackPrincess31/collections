@@ -2,7 +2,7 @@ const initialState = {
     items: []
   };
   
-  const addItemToBasket = (array, action) => {
+  const addItem = (array, action) => {
     return array.map((item, index) => {
       if (index !== action.payload) {
         return item;
@@ -10,7 +10,7 @@ const initialState = {
   
       return {
         ...item,
-        inBasket: true
+        inCollection: true
       };
     });
   };
@@ -28,14 +28,14 @@ const initialState = {
             ...state.items,
             {
               value: action.payload,
-              inBasket: false
+              inCollection: false
             }
           ]
         };
       case "ADD_TO_BASKET":
         return {
           ...state,
-          items: addItemToBasket(state.items, action)
+          items: addItem(state.items, action)
         };
       case "REMOVE_ITEM":
         return {
