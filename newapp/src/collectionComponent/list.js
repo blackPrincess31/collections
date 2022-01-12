@@ -1,19 +1,19 @@
 import React from "react";
 import { ListGroup } from "react-bootstrap";
 import { useSelector } from "react-redux";
-import { InListItem, InCollectionItem } from ".";
+import {InCollectionItem } from ".";
 
-export default function ShoppingList() {
+export default function List() {
   const items = useSelector(state => state.items);
 
   return (
     <ListGroup className="m-4" variant="flush">
       {items.map((item, index) => {
-        return item.inCollection ? (
-          <InCollectionItem item={item} index={index} />
-        ) : (
-          <InListItem item={item} index={index} />
-        );
+
+         if(item.inCollection){
+         return( <InCollectionItem item={item} index={index} />)
+        }
+         
       })}
     </ListGroup>
   );

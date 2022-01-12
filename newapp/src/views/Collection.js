@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Container } from "react-bootstrap";
 
-import { AddItem,ShoppingList } from "../collectionComponent"; 
+import { AddItem,List } from "../collectionComponent"; 
 
  const Collections = () => {
 
@@ -11,7 +11,7 @@ import { AddItem,ShoppingList } from "../collectionComponent";
       <div>
       <h1>Collections List</h1>
       <AddItem />
-      <ShoppingList />
+      <List />
       </div>
       </Container>
   )
