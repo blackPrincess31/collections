@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Button } from "react-bootstrap";
 import { useDispatch } from "react-redux";
 import { actionCreators } from "../store2/actions2";
 
+
 export default function Input() {
   const dispatch = useDispatch();
+  
   const [input, setInput] = useState("");
 
   const handleInputChange = event => {
@@ -12,8 +14,10 @@ export default function Input() {
   };
 
   const handleSubmit = () => {
+    
     dispatch(actionCreators.addToList(input));
-    setInput("");
+    setInput(" ");
+    
     
   };
 

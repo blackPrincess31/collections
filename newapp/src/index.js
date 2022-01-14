@@ -9,13 +9,17 @@ import { createStore, applyMiddleware } from 'redux';
 // import CollectionReducer from "./redux/redusers";
 // import thunk from 'redux-thunk';
 import { Provider } from "react-redux";
-// import store from "./redux/store";
+
+import store from "./store2/store"
+
 
 // const store = createStore(CollectionReducer, applyMiddleware(thunk));
 
-import reducer from "./store2/reducer2";
 
-const store = createStore(reducer);
+
+
+//  export const store = createStore(reducer);
+
 
 ReactDOM.render(
 

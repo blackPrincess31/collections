@@ -34,11 +34,7 @@ const initialState = {
             }
           ]
         };
-      // case "ADD_TO_COLLECTION":
-      //   return {
-      //     ...state,
-      //     items: addItem(state.items, action)
-      //   };
+      
       case "REMOVE_ITEM":
         return {
           ...state,
