@@ -2,6 +2,6 @@
 import AddItem from "./AddItem";
 
 import List from "./list";
-import InCollectionItem from "./InCollectionItem";
+import RemoveInCollectionItem from "./RemoveInCollectionItem";
 
-export { AddItem, List, InCollectionItem };
+export { AddItem, List, RemoveInCollectionItem };

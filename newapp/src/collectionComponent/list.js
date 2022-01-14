@@ -1,7 +1,7 @@
 import React from "react";
 import { ListGroup } from "react-bootstrap";
 import { useSelector } from "react-redux";
-import {InCollectionItem } from ".";
+import {RemoveInCollectionItem } from ".";
 
 export default function List() {
   const items = useSelector(state => state.items);
@@ -11,7 +11,7 @@ export default function List() {
       {items.map((item, index) => {
 
          if(item.inCollection){
-         return( <InCollectionItem item={item} index={index} />)
+         return( <RemoveInCollectionItem item={item} index={index} />)
         }
          
       })}

@@ -3,7 +3,7 @@ import { ListGroup } from "react-bootstrap";
 import { useDispatch } from "react-redux";
 import { actionCreators } from "../store2/actions2";
 
-export default function InCollectionItem({ item, index }) {
+export default function RemoveInCollectionItem({ item, index }) {
   const dispatch = useDispatch();
 
   const removeItemFromList = index => {
