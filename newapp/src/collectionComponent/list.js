@@ -10,9 +10,9 @@ export default function List() {
     <ListGroup className="m-4" variant="flush">
       {items.map((item, index) => {
 
-         if(item.inCollection){
+         
          return( <RemoveInCollectionItem item={item} index={index} />)
-        }
+        
          
       })}
     </ListGroup>

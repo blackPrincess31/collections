@@ -1,21 +1,9 @@
 const initialState = {
     items: []
   };
-  let id = 0;
-  const addItem = (array, action) => {
-    return array.map((item, index) => {
-      if (index !== action.payload) {
-        return item;
-               
-      }
-  
-      return {
-        ...item,
-        inCollection: true,
-      };
-    });
-  };
-  
+
+  let id = 1;
+   
   const removeItemFromList = (array, action) => {
     return array.filter((item, index) => index !== action.payload);
   };
@@ -29,8 +17,7 @@ const initialState = {
             ...state.items,
             {
               value: action.payload,
-              inCollection: true,
-              id: ++id,
+              id: id++,
             }
           ]
         };
