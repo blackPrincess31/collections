@@ -7,7 +7,6 @@ import { AddItem,List } from "../collectionComponent";
 
   return (
     <Container className="mb-5">
-      <h1>Collections</h1>
       <div>
       <h1>Collections List</h1>
       <AddItem />

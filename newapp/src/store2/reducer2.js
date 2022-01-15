@@ -1,8 +1,6 @@
 const initialState = {
     items: []
   };
-
-  let id = 1;
    
   const removeItemFromList = (array, action) => {
     return array.filter((item, index) => index !== action.payload);
@@ -17,7 +15,7 @@ const initialState = {
             ...state.items,
             {
               value: action.payload,
-              id: id++,
+              id: Date.now()
             }
           ]
         };

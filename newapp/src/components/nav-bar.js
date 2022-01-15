@@ -6,15 +6,12 @@ import { Container, Nav, Navbar } from "react-bootstrap";
 
 const MainNav = () => (
 
-  <Nav className ="mr-auto" >
+  <Nav >
     <Nav.Link as={RouterNavLink} exact to="/" activeClassName="router-link-exact-active">
       Home
     </Nav.Link>
     <Nav.Link as={RouterNavLink} exact to="/profile" activeClassName="router-link-exact-active">
       Profile
-    </Nav.Link>
-    <Nav.Link as={RouterNavLink} exact to="/Collections" activeClassName="router-link-exact-active">
-    Collections
     </Nav.Link>
   </Nav>
 

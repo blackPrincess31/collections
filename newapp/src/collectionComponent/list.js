@@ -11,7 +11,7 @@ export default function List() {
       {items.map((item, index) => {
 
          
-         return( <RemoveInCollectionItem item={item} index={index} />)
+         return( <RemoveInCollectionItem item={item} index={index} key={item.id}/>)
         
          
       })}
