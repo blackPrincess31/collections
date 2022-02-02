@@ -29,7 +29,3 @@ const Auth0ProviderWithHistory = ({ children }) => {
 
 export default Auth0ProviderWithHistory;
 
-
-//метод onRedirectCallback () для обработки события, когда Auth0 перенаправляет пользователей со страницы Auth0 в ваше приложение React
-//хук useHistory (), чтобы получить объект истории из React Router 
-//метод history.push (), чтобы вернуть пользователей на маршрут, к которому они намеревались получить доступ до аутентификации

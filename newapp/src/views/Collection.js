@@ -7,8 +7,8 @@ import { AddItem,List } from "../collectionComponent";
 
   return (
     <Container className="mb-5">
-      <div>
-      <h1>Collections List</h1>
+      <div > 
+      <h1 class = "text-center" >Collections List</h1>
       <AddItem />
       <List />
       </div>
